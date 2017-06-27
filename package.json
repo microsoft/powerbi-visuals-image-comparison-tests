@@ -9,10 +9,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://pbix.visualstudio.com/DefaultCollection/PaaS/_git/CustomVisualsTests"
+    "url": "git+https://github.com/Microsoft/powerbi-visuals-image-comparison-tests"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Microsoft",
+  "license": "MIT",
   "devDependencies": {
     "@types/jasmine": "^2.5.51",
     "@types/jasmine-jquery": "^1.5.30",
