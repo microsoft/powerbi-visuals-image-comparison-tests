@@ -30,7 +30,7 @@ notifications:
   # Email
   - provider: Email
     to:
-      - pbicvsupport@microsoft.com
+      - pbicustomviz@microsoft.com
     subject: 'ImageComparisonTest. Build {{status}}'
 
 # What combinations to test
