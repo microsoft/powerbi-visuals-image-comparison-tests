@@ -30,9 +30,6 @@ notifications:
   # Email
   - provider: Email
     to:
-      - v-sesavv@microsoft.com
-      - v-grniki@microsoft.com
-      - v-viig@microsoft.com
       - pbicvsupport@microsoft.com
     subject: 'ImageComparisonTest. Build {{status}}'
 
