@@ -1,0 +1,42 @@
+# AppVeyor file
+# http://www.appveyor.com/docs/appveyor-yml
+
+# Build version format test
+version: "{build}"
+
+# Fix line endings on Windows
+init:
+  - git config --global core.autocrlf true
+
+install:
+  - ps: Install-Product node $env:nodejs_version x64
+
+  # installing local npm packages
+  - npm install
+
+build: off
+
+test_script:
+  # Output useful info for debugging.
+  - node --version && npm --version
+  - npm run image-comparison-test
+
+artifacts:
+  - path: screenshots
+    name: screenshots
+    type: Auto
+
+notifications:
+  # Email
+  - provider: Email
+    to:
+      - pbicustomviz@microsoft.com
+    subject: 'ImageComparisonTest. Build {{status}}'
+
+# What combinations to test
+environment:
+  nodejs_version: "7.7.1"
+
+cache:
+  - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
+  - node_modules -> package.json                                        # local npm modules

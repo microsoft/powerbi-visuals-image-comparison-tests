@@ -1,0 +1,30 @@
+{
+  "name": "powerbi-visuals-image-comparison-tests",
+  "version": "1.0.0",
+  "description": "Image comparison tests for custom visuals",
+  "scripts": {
+    "preimage-comparison-test": "tsc --project ./tsconfig.json",
+    "image-comparison-test": "node ./run.js",
+    "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\" \"+(src|test)/**/*.ts\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Microsoft/powerbi-visuals-image-comparison-tests"
+  },
+  "author": "Microsoft",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jasmine": "^2.5.51",
+    "@types/jasmine-jquery": "^1.5.30",
+    "@types/lodash": "^4.14.65",
+    "browsers-binaries-standalone": "0.0.2",
+    "jasmine": "^2.6.0",
+    "jasmine-jquery": "^2.1.1",
+    "lodash": "^4.17.4",
+    "tslint": "^5.4.3",
+    "tslint-microsoft-contrib": "^5.0.0",
+    "typescript": "^2.3.4",
+    "webdriver-client-test-runner": "0.0.2",
+    "webdriver-standalone-server": "0.0.5"
+  }
+}

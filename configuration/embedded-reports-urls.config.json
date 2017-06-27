@@ -1,0 +1,35 @@
+[
+  {
+    "name": "ChicletSlicer",
+    "environments" : {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTA1ZmQ5NWItOGE5NS00NTQ4LTgyMDQtMjE0NGJhYWQxZTQzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGEyYzIyZmQtYzkzMS00NWEyLWEwMTMtODcyM2ZmM2JmZmI4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmYyODEzZDYtNGJmYy00ZTJhLTg5ZWQtNTU0ODdlY2IwNDcyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "DualKPI",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiNWU2MDBiOWItODUyYi00ZGRjLTliNWUtZTU3NmQxMDBkZjc2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZWM1MTM1NTMtMzI3Ni00NGJmLThmNWItOTlhNmZkMThjNjUxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZDQ2MWRlNWMtYWMyMi00OGQxLWFhZTUtNjQwNTgxYzU0Y2RiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "PowerKPI",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiOGI0M2VmZGItMTEzMC00YzNmLWI5OWUtODA1Zjc2ZWNlMTBkIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYjlkYjk2ZDgtNmY1MS00NDI3LWIxZjktNDJkNDE2ZGE1YjY0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzQ3NzU0MjgtMjQ1YS00NGU2LTgzN2ItYzA4ZGE2OWMyNGRmIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "FlyWheel",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiNDI0NDQ5YjktZmE2ZS00MGViLTlhYmItMmFjYWFhMTc0NDc4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNmI3MGQ2ODEtZjIzMi00Njc2LWJkMGUtNzExY2EwYzYyNzAwIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzRlODQ0MzUtYjNhMC00ZWFjLTgyNGYtOGM0YWY1YjhmNmJjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  }
+]
+

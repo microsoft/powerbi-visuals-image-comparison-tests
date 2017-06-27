@@ -1,0 +1,10 @@
+{
+  "compilerOptions": {
+    "lib": ["es2015", "dom"],
+    "target": "ES5",
+    "outFile": "./build/test.js"
+  },
+  "files": [
+    "./src/test.ts"
+  ]
+}
