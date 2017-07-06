@@ -34,7 +34,8 @@ notifications:
     subject: 'ImageComparisonTest. Build {{status}}'
 
 on_failure:
-  - ps: Get-ChildItem .\screenshots\**\*.* -Recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+  - 7z a screensohts.zip screenshots
+  - appveyor PushArtifact screensohts.zip
 
 on_success:
  - git config --global credential.helper store
