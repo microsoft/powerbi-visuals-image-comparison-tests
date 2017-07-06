@@ -33,9 +33,23 @@ notifications:
       - pbicustomviz@microsoft.com
     subject: 'ImageComparisonTest. Build {{status}}'
 
+on_failure:
+  - ps: Get-ChildItem .\screenshots\**\*.* -Recurse | % { Push-AppveyorArtifact $_.FullName -FileName $_.Name }
+
+on_success:
+ - git config --global credential.helper store
+ - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
+ - git config --global user.email "pbicvbot@microsoft.com"
+ - git config --global user.name "PowerBI CV Bot"
+ - git add screenshots/*
+ - git commit --allow-empty -m "Appveyor.Screenshots sync[skip ci]"
+ - git push -f origin HEAD:master
+
 # What combinations to test
 environment:
   nodejs_version: "7.7.1"
+  access_token:
+    secure: 4bKoxVlHpEl7QGkbG4q35OL0Zx8IrA6sj5yBkJx0UiQqrdnCPtqVkpsZMcHDe43+
 
 cache:
   - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
