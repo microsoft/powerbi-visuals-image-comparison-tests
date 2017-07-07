@@ -1,6 +1,12 @@
 # AppVeyor file
 # http://www.appveyor.com/docs/appveyor-yml
 
+# What combinations to test
+environment:
+  nodejs_version: "7.7.1"
+  access_token:
+    secure: jkwt64TmhxwWc861PGDdv5y1oustxuPCDh8K7+0lyp/PgxQGW3vH3o4QMXAlyznG
+
 # Build version format test
 version: "{build}"
 
@@ -34,23 +40,17 @@ notifications:
     subject: 'ImageComparisonTest. Build {{status}}'
 
 on_failure:
-  - 7z a screensohts.zip screenshots
-  - appveyor PushArtifact screensohts.zip
+  - 7z a screenshots.zip screenshots
+  - appveyor PushArtifact screenshots.zip
 
 on_success:
  - git config --global credential.helper store
  - ps: Add-Content "$env:USERPROFILE\.git-credentials" "https://$($env:access_token):x-oauth-basic@github.com`n"
  - git config --global user.email "pbicvbot@microsoft.com"
- - git config --global user.name "PowerBI CV Bot"
+ - git config --global user.name "Power BI Custom Visuals Bot"
  - git add screenshots/*
  - git commit --allow-empty -m "Appveyor.Screenshots sync[skip ci]"
  - git push -f origin HEAD:master
-
-# What combinations to test
-environment:
-  nodejs_version: "7.7.1"
-  access_token:
-    secure: 4bKoxVlHpEl7QGkbG4q35OL0Zx8IrA6sj5yBkJx0UiQqrdnCPtqVkpsZMcHDe43+
 
 cache:
   - C:\Users\appveyor\AppData\Roaming\npm-cache -> package.json         # npm cache
