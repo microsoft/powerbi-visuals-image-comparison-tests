@@ -38,6 +38,10 @@ notifications:
     to:
       - pbicustomviz@microsoft.com
     subject: 'ImageComparisonTest. Build {{status}}'
+  - provider: Slack
+    chanel: testing-img-comp
+    incoming_webhook:
+      secure: /ETrASibodbPcNpx0P3L9sVLbvN9FrMKJASti0kHddEu3GNXZfiXs0mZCPUqIv92cjvLCrOeoo7K0g6Z3K2kP2DIkX8nWYbiMQR1icY8Z/A=
 
 on_failure:
   - 7z a screenshots.zip screenshots
