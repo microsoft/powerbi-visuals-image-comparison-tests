@@ -36,7 +36,7 @@ let config = require('../configuration/embedded-reports-urls.config.json');
 module powerbi.extensibility.visual.test.imageComparison {
 
     const existTimeout = 10000;
-    const pauseTimeout = 2000;
+    const pauseTimeout = 2500;
     const element = "div.visual";
 
     config.forEach(item => {
