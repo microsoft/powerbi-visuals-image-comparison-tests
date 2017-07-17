@@ -37,7 +37,7 @@ module powerbi.extensibility.visual.test.imageComparison {
 
     const existTimeout = 10000;
     const pauseTimeout = 2500;
-    const element = "div.visual";
+    let element = "div.visual";
 
     config.forEach(item => {
         describe(item.name || "Name is not specified", () => {
@@ -52,6 +52,10 @@ module powerbi.extensibility.visual.test.imageComparison {
                         .timeouts("script",60000)
                         .timeouts("implicit",60000)
                         .timeouts("page load",60000);
+
+                    if (item.element) {
+                        element = item.element;
+                    }
 
                     browser
                         .url(url)

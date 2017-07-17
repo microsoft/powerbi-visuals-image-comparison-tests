@@ -30,6 +30,167 @@
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDE2OWZjOWYtM2UxNy00ODM2LWI4NDUtYmFiMDljNTBmN2MzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZjFkNThiYWEtMjQzOS00MDBhLWI2NzctMzYxNzYyMDVmZmViIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
     }
+  },
+  {
+    "name": "AsterPlot",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZjUwNjBjOGQtZWY4My00ZDAwLWE5ZGItMjU0YzVjZDkyODAzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDY5OGE1OGQtYTQ0Yi00N2I4LThhZGItMjI0NDM3MmEyMjIyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZjI3MmJiN2MtMTJmZS00MWIxLThjYTAtYmVhYzcwNjg1OTc0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "BulletChart",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYzUwNjI1NzgtZTVkOS00OTRkLWFhMDgtZWNkZjNjMTcwNzc1IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiN2VlYWQ2YzQtNzdmZC00NmQxLThmNjQtNTc5OWNkOGU5MjljIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNzQzYTgzZTUtYzU4Yy00YWY1LTk1OGMtYThhZjdmNTg5NzAyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "ChordChart",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZTVhY2ZjNDctNDQ5Mi00NjBlLTk3NGEtYjJhYmY4YWYzMjVkIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiODQyNmQ4OTUtNDA4OS00MDRlLThlODItOWVhZTU4YjY0NGIxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYTY2NjFjYjMtM2JhZC00MzE1LWIwM2UtNmJmYThmYjVmZmQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "DotPlot",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiNTUwODhiMjctMGVmYS00ZWViLWFhMDItNGVjZGZkMTNjYzljIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDUxMjA0YTgtYmYxMS00ZDI4LWFiMmEtMDA2OTM4MTVmMDhiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiOWJiNjAzNzItNDljOS00M2QzLWEzZWEtNjVhMjAzMTVlMzc2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "EnhancedScatter",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYmZkZDE0YTYtMWZiOS00NjE5LTkzYTAtZjlhYjQzMThiZjAzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZTdhODA5MjAtNDFkNi00MzAxLWI5YzUtZTJlYzE1MWMzYzMxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZWM2NGMyMzEtMWU1OC00NDBkLTk2MWUtYjY1YWRhNGE1ZTlhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Gantt",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiMzc5YjQ0NDQtYjA1NS00ODg4LTkzMDItMjQyYWYxN2RjZGM4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMzI2ZTlhZDItNGY0Yi00MjU2LTkwOTQtNGU1YzZiYTkzZWYxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNDcwMzQ0MTMtM2Y3NC00NmZlLThkY2UtNGM5OTdjNjVhN2RjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "GlobeMap",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZTM0MWZkYjEtYjliNi00MmNhLTk5MGUtM2I0Nzc4NmUzNGJhIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDQ2MzRmM2UtNDNlYy00NDAwLWIzZTQtZTdkZWY1MzdhMTE0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZDI3OWRiZWItMjZkOC00MzM4LWFhOTEtYjE1ZTg0MGM5NTIxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Histogram",
+    "element": ".visualContainerHost",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWZlOWJhODEtZWNjNi00MjQ3LWJjNmYtOTRiYThlMTcwYzI2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiM2FkNzMyNzktZWJkNS00MDljLWJlNDEtZDE2YmViNzA1OWUyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiMTFjNTdiN2QtYzcyOS00NWUzLWE1Y2UtNzYxNzc3NThiNzA3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "LineDotChart",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiMWM5MzE5YjgtZWFkMS00ZWY0LTgyZDEtMmVjNzVhNDhlNDYzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYjNjOWY3MzgtNWNmNy00YWM3LWFlNWUtNDFkOTI4NWFkYTU5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZjdhZDE2NTgtYTRmZS00Mjk4LWI0NmUtYjYzOTY5YTQ3YjVmIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "MekkoChart",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTdlNWIyMDItMmZlNy00ZWJhLWE2Y2ItZGM3OTg1NGEzZTg4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOWI0MjMyMTctMjE3My00NTQ1LTgzNjctY2Q0OTg3NTRhNmVlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiM2Y1OWEzYTUtZWVlZC00Y2Q5LThmNWEtZjNmZDM5MTg5OTI1IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "PulseChart",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZjBmMDk2NjEtZTcxMS00ZTU5LWI2ZjgtMjFjNTQ3NjBlMWYwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDYzZTNlZmItMmJjYi00MTFkLTg0OWItMDdiM2U3MmM0MjUxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNDE4MWM3ZDctYzQ4YS00ZmNhLWEzMDAtNjllMGIwODc4OGQ5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Radar",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiMjY2NDAxNjctODk3Ny00MGMwLTk5YWMtZDdmNGJlN2YxMmE1IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZjYwNDdhMmYtNTBiNi00M2M4LTk2OWYtNjNlYmQ4NDIyMTVjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzZlNjc1YTktNjZiNC00NTgxLTlhNDItOWMyOTZmMTVhNjI4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "SandDance",
+    "element": "div.visual .rootElement > *",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiODU5YTQ1NTItZjg1Ny00Nzc2LThkNTUtODM5YmI0MTY3ZGZmIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMDI0ZGFiMjUtNDU0MS00MmExLWFhM2YtODY3NjlkM2IyNjhjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiMDc5ZDlkMDAtMTUyZi00MjRiLThkODEtYzdlZDg5ZDlmNjEwIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "SankeyDiagram",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTUxMzFiMWYtNGM0My00NzRjLWIzZmYtZDFkNDdkZjIwYTEyIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOTRiZDc2MWUtNmNmOS00NWU1LWEwMTAtNmQxMzZiM2NmNzM2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiY2RlZDE3NGQtYWUxMi00Y2E0LWJjYTUtNmYzMDc4ZTAyMTEwIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "StreamGraph",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiMTZiYzU3ZDEtZjhlYS00YWZkLTg3NWYtZTkyYTlmNDZjMTI2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWVkOTYwOTYtN2ExMi00ODRjLWE1OGQtYjZjMjFkN2QzNzkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiN2NiM2QxMDEtZjcyYi00OTVjLTg1YWMtNTE2YTcyNjBiYjcyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Sunburst",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiODBhZDVmYzgtZTYwYS00MDE0LTk1MmEtZThiNDQ4OTU0MWViIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZTk1YmFmNGQtZmI0Ni00YWU2LWJiNGQtNGM3OGIxMDlmYTk3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYTAxZmI4MmMtZGIzNi00ZTEzLTg4YjItZGU0OTEwNzkxOWFmIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "TableHeatMap",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTA1NTM3NzItYWRlZC00MGVlLThiNmYtMWJmZTg0M2JkNjdmIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGIxYmJmNWMtNjMwNC00MDY2LWI0YzItMzI5NmRjY2VhMmQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNGRhNjVjZWMtOTA0ZC00YTc5LWEzMTktMTFmM2ZlOTRiYmEzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Timeline",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiNWU4MzVjMWEtNGExMy00ZWQ1LTlkZGMtYjMyM2IxYmVmNDQwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYzJiMmU5ZmUtZWQxMS00MjkwLWFiNWQtYjY2Njk2NTkwYmRkIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzU0NjVkNGQtNjE0My00ODc4LTk2MTYtY2U4MjRhNjdkMjU5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Tornado",
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiODdjMTlkOGYtOWQzYS00YjIwLWIyNmMtNGU1ZjFhY2E3MzNhIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiODcyMmVhNzctOWNjMC00YjQzLTkyNWEtM2FiZWFjY2JkM2ZiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzAwYjQzMmYtNDVhZS00NmM5LThlODYtOGM0ZmUyMTcyMTUzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "FunnelPlot",
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWNlOTBiNDMtZDljOC00ZjYyLTg1ODYtMTE3ZTMyYjM1MWNiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmI0Nzk4OWUtNTU3My00OGFkLWEyNmQtMjA0NWExYjlmZWQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
   }
 ]
 
