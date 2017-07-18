@@ -27,11 +27,6 @@ test_script:
   - node --version && npm --version
   - npm run image-comparison-test
 
-artifacts:
-  - path: screenshots
-    name: screenshots
-    type: Auto
-
 notifications:
   # Email
   - provider: Email
@@ -43,7 +38,7 @@ notifications:
     incoming_webhook:
       secure: /ETrASibodbPcNpx0P3L9sVLbvN9FrMKJASti0kHddEu3GNXZfiXs0mZCPUqIv92cjvLCrOeoo7K0g6Z3K2kP2DIkX8nWYbiMQR1icY8Z/A=
 
-on_failure:
+on_finish:
   - 7z a screenshots.zip screenshots
   - appveyor PushArtifact screenshots.zip
 
