@@ -35,9 +35,9 @@ let config = require('../configuration/embedded-reports-urls.config.json');
 
 module powerbi.extensibility.visual.test.imageComparison {
 
-    const existTimeout = 10000;
-    const pauseTimeout = 2500;
-    const element = "div.visual";
+    const existTimeout = 15000,
+        pause = 2500,
+        element = "div.visual";
 
     config.forEach(item => {
         describe(item.name || "Name is not specified", () => {
@@ -55,8 +55,8 @@ module powerbi.extensibility.visual.test.imageComparison {
 
                     browser
                         .url(url)
-                        .waitForExist(element, existTimeout)
-                        .pause(pauseTimeout)
+                        .waitForExist(item.element || element, item.existTimeout || existTimeout)
+                        .pause(item.pause || pause)
                         .assertAreaScreenshotMatch({
                             name: "visual",
                             ignore: 'antialiasing',
