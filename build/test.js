@@ -39,9 +39,7 @@ var powerbi;
             (function (test) {
                 var imageComparison;
                 (function (imageComparison) {
-                    var existTimeout = 10000;
-                    var pauseTimeout = 2000;
-                    var element = "div.visual";
+                    var existTimeout = 10000, pauseTimeout = 2500, element = "div.visual";
                     config.forEach(function (item) {
                         describe(item.name || "Name is not specified", function () {
                             var _loop_1 = function (env) {
@@ -55,8 +53,8 @@ var powerbi;
                                         .timeouts("page load", 60000);
                                     browser
                                         .url(url)
-                                        .waitForExist(element, existTimeout)
-                                        .pause(pauseTimeout)
+                                        .waitForExist(item.element || element, item.exist || existTimeout)
+                                        .pause(item.pause || pauseTimeout)
                                         .assertAreaScreenshotMatch({
                                         name: "visual",
                                         ignore: 'antialiasing',
