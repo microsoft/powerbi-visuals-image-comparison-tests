@@ -187,7 +187,7 @@
   },
   {
     "name": "FunnelPlot",
-    "pause": 5000,
+    "pause": 6000,
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWNlOTBiNDMtZDljOC00ZjYyLTg1ODYtMTE3ZTMyYjM1MWNiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmI0Nzk4OWUtNTU3My00OGFkLWEyNmQtMjA0NWExYjlmZWQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
