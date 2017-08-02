@@ -130,7 +130,9 @@
   },
   {
     "name": "SandDance",
-    "element": "div.visual div.rootElement > div:not(.invisible) > div",
+    "element": {
+      "await": "div.visual div.rootElement > div:not(.invisible) > div"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiODU5YTQ1NTItZjg1Ny00Nzc2LThkNTUtODM5YmI0MTY3ZGZmIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMDI0ZGFiMjUtNDU0MS00MmExLWFhM2YtODY3NjlkM2IyNjhjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -187,10 +189,88 @@
   },
   {
     "name": "FunnelPlot",
-    "pause": 6000,
+    "pause": 5000,
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWNlOTBiNDMtZDljOC00ZjYyLTg1ODYtMTE3ZTMyYjM1MWNiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmI0Nzk4OWUtNTU3My00OGFkLWEyNmQtMjA0NWExYjlmZWQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "AssociationRules",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZGFhZmZkYmQtYmVlOS00MWQ3LTlhMDItZjUzZTA0Y2UwOTBhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNmZhZTE4OWYtMjI0Zi00ZjFlLWJiNzEtMzE4Y2Y3MWZkZjcwIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Spline",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMjFiNTQ5MWQtMGM4NC00YjgzLWE1ZDgtNWM0OWE2ZTZjMGJlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiOTlkMDZhOTQtNTRhZi00OGQ1LTk3YTgtMGQzYTZhNWQ5MzljIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "TimeSeriesDecomposition",
+    "pause": 5000,
+    "element": {
+      "snapshot": ".visualContainerHost"
+    },
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGRhMjU2NDYtYzgxMi00YThlLThhYjEtMmRlNjUxZWQ0M2U0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYjYxYThhMzktMDMxNy00ZmNkLWIzMzUtZDQzYzM1OGNhMDk4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "DesicionTree",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNGNlYjdjZDUtM2JlMS00MDY1LThjYjMtYzhlMTdmYzU0Mjc1IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNjI5ZDExYmItNGZlNS00ZTQ1LWI5OWYtNDk4ZmYwZmU4Y2ZmIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "Clustering",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMThhNjk3YmItNDAxZC00ODA0LWExMTQtOTIyNjk0OGE1OTM2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNWY3OTcxZWQtNjU2YS00ZDAwLWFiYmQtN2Q2N2U0NjRlMjdhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "CorrelationPlot",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYWVkZTg1ZWUtZjU1ZC00YjZmLWI2NDQtNjFhNGMxNzFlZDM3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzE3ZmQxN2EtNDdhNy00YTM3LWEzMGMtNmEzYjk2ZGY0Y2E3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "ClusteringWithOutliers",
+    "pause": 5000,
+    "element": {
+      "snapshot": ".visualContainerHost"
+    },
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMjVjYTc5YjItNzJhMS00ZTM3LTljNGEtNjJjNWVkMGJmN2JlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZmM4MmZhMWItN2I0OS00OWZlLTkzNWEtMGUyNDg0OGJkNzkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "TimeSeriesForecasting",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYjMzNzBhODUtNDM1Ny00N2NiLThjZTktMzA5ZDhlMTk3ODY1IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZWY2MGM1Y2EtNTZlMS00OTI5LTk2NTQtZTJiNTg3ZDAxNjE5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
+    }
+  },
+  {
+    "name": "ForecastingWithARIMA",
+    "pause": 5000,
+    "environments": {
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOTFjZDk3NDUtNzdhMS00YmJiLTkxOWUtMGIxOTIwZTQ3ZDg4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNzYwM2VlOWUtYjFjZC00YTAxLWE4MjMtNjQ5YTkwMTI0MDI0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
     }
   }
 ]
