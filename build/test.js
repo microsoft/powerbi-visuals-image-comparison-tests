@@ -39,7 +39,7 @@ var powerbi;
             (function (test) {
                 var imageComparison;
                 (function (imageComparison) {
-                    var existTimeout = 15000, pause = 2500, defaultElement = "div.visual";
+                    var existTimeout = 15000, pause = 0, defaultElement = "div.visual", defaultFrameElement = "svg";
                     config.forEach(function (item) {
                         describe(item.name || "Name is not specified", function () {
                             var _loop_1 = function (env) {
@@ -54,13 +54,33 @@ var powerbi;
                                     browser
                                         .url(url)
                                         .waitForExist((item.element && item.element.await) || defaultElement, item.existTimeout || existTimeout)
-                                        .pause(item.pause || pause)
-                                        .assertAreaScreenshotMatch({
-                                        name: "visual",
-                                        ignore: 'antialiasing',
-                                        elem: (item.element && item.element.snapshot) || defaultElement,
-                                    })
-                                        .call(done);
+                                        .then(function () {
+                                        var framePromise = new Promise(function (resolve) {
+                                            if (!item.element || (item.element && !item.element.frame)) {
+                                                return resolve();
+                                            }
+                                            var el;
+                                            browser
+                                                .element("iframe.visual-sandbox")
+                                                .then(function (res) { return browser.frame(res.value); })
+                                                .waitForExist((item.element && item.element.frame) || defaultFrameElement, item.existTimeout || existTimeout)
+                                                .frameParent()
+                                                .then(function () {
+                                                resolve();
+                                            });
+                                        });
+                                        framePromise
+                                            .then(function () {
+                                            browser
+                                                .pause(item.pause || pause)
+                                                .assertAreaScreenshotMatch({
+                                                name: "visual",
+                                                ignore: 'antialiasing',
+                                                elem: (item.element && item.element.snapshot) || defaultElement,
+                                            })
+                                                .call(done);
+                                        });
+                                    });
                                 });
                             };
                             for (var env in item.environments) {

@@ -37,7 +37,8 @@ module powerbi.extensibility.visual.test.imageComparison {
 
     const existTimeout = 15000,
         pause = 2500,
-        defaultElement = "div.visual";
+        defaultElement = "div.visual",
+        defaultFrameElement = "svg";
 
     config.forEach(item => {
         describe(item.name || "Name is not specified", () => {
@@ -49,23 +50,46 @@ module powerbi.extensibility.visual.test.imageComparison {
                     expect(isUrl).toBe(true);
 
                     browser
-                        .timeouts("script",60000)
-                        .timeouts("implicit",60000)
-                        .timeouts("page load",60000);
+                        .timeouts("script", 60000)
+                        .timeouts("implicit", 60000)
+                        .timeouts("page load", 60000);
 
                     browser
                         .url(url)
                         .waitForExist(
                             (item.element && item.element.await) || defaultElement,
-                             item.existTimeout || existTimeout
+                            item.existTimeout || existTimeout
                         )
-                        .pause(item.pause || pause)
-                        .assertAreaScreenshotMatch({
-                            name: "visual",
-                            ignore: 'antialiasing',
-                            elem: (item.element && item.element.snapshot) || defaultElement,
-                        })
-                        .call(done);
+                        .then(() => {
+                            const framePromise = new Promise(resolve => {
+                                if (!item.element || (item.element && !item.element.frame)) {
+                                    return resolve();
+                                }
+
+                                browser
+                                    .element("iframe.visual-sandbox")
+                                    .then((res) => browser.frame(res.value))
+                                    .waitForExist(
+                                        (item.element && item.element.frame) || defaultFrameElement,
+                                        item.existTimeout || existTimeout)
+                                    .frameParent()
+                                    .then(() => {
+                                        resolve();
+                                    })
+                            });
+
+                            framePromise
+                                .then(() => {
+                                    browser
+                                        .pause(item.pause || pause)
+                                        .assertAreaScreenshotMatch({
+                                            name: "visual",
+                                            ignore: 'antialiasing',
+                                            elem: (item.element && item.element.snapshot) || defaultElement,
+                                        })
+                                        .call(done);
+                                });
+                        });
                 });
             }
         });
