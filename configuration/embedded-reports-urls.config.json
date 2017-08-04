@@ -1,6 +1,9 @@
 [
   {
     "name": "ChicletSlicer",
+    "element": {
+      "frame": "div.chicletSlicer"
+    },
     "environments" : {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTA1ZmQ5NWItOGE5NS00NTQ4LTgyMDQtMjE0NGJhYWQxZTQzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGEyYzIyZmQtYzkzMS00NWEyLWEwMTMtODcyM2ZmM2JmZmI4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -9,6 +12,9 @@
   },
   {
     "name": "DualKPI",
+    "element": {
+      "await": "svg.dualKpi g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiNWU2MDBiOWItODUyYi00ZGRjLTliNWUtZTU3NmQxMDBkZjc2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZWM1MTM1NTMtMzI3Ni00NGJmLThmNWItOTlhNmZkMThjNjUxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -17,6 +23,9 @@
   },
   {
     "name": "PowerKPI",
+    "element": {
+      "await": "div.powerKPI"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWRmYmEzZDktMmQ1OC00ZmRiLWE2NDMtMjYxMjc3NWY3NTQ4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiM2RkOGY3ZDQtMzBkMi00MzI3LTg2OTItNzQ3YzE4NjliODQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -25,6 +34,9 @@
   },
   {
     "name": "FlyWheel",
+    "element": {
+      "frame": "svg.bapiGraph g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiMjY3NTgxN2EtNDZhZi00ZmQyLTgxMDYtYTg2MmY1ZjRjNWI0IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDE2OWZjOWYtM2UxNy00ODM2LWI4NDUtYmFiMDljNTBmN2MzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -33,6 +45,9 @@
   },
   {
     "name": "AsterPlot",
+    "element": {
+      "frame": "svg.asterPlot g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZjUwNjBjOGQtZWY4My00ZDAwLWE5ZGItMjU0YzVjZDkyODAzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDY5OGE1OGQtYTQ0Yi00N2I4LThhZGItMjI0NDM3MmEyMjIyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -41,6 +56,9 @@
   },
   {
     "name": "BulletChart",
+    "element": {
+      "frame": "div.bulletChart > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYzUwNjI1NzgtZTVkOS00OTRkLWFhMDgtZWNkZjNjMTcwNzc1IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiN2VlYWQ2YzQtNzdmZC00NmQxLThmNjQtNTc5OWNkOGU5MjljIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -49,6 +67,9 @@
   },
   {
     "name": "ChordChart",
+    "element": {
+      "frame": "svg.chordChart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZTVhY2ZjNDctNDQ5Mi00NjBlLTk3NGEtYjJhYmY4YWYzMjVkIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiODQyNmQ4OTUtNDA4OS00MDRlLThlODItOWVhZTU4YjY0NGIxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -57,6 +78,9 @@
   },
   {
     "name": "DotPlot",
+    "element": {
+      "frame": "svg.dotplot g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiNTUwODhiMjctMGVmYS00ZWViLWFhMDItNGVjZGZkMTNjYzljIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDUxMjA0YTgtYmYxMS00ZDI4LWFiMmEtMDA2OTM4MTVmMDhiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -65,6 +89,9 @@
   },
   {
     "name": "EnhancedScatter",
+    "element": {
+      "await": "svg.enhancedScatterChart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYmZkZDE0YTYtMWZiOS00NjE5LTkzYTAtZjlhYjQzMThiZjAzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZTdhODA5MjAtNDFkNi00MzAxLWI5YzUtZTJlYzE1MWMzYzMxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -73,6 +100,9 @@
   },
   {
     "name": "Gantt",
+    "element": {
+      "frame": "svg.gantt g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiMzc5YjQ0NDQtYjA1NS00ODg4LTkzMDItMjQyYWYxN2RjZGM4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMzI2ZTlhZDItNGY0Yi00MjU2LTkwOTQtNGU1YzZiYTkzZWYxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -81,7 +111,7 @@
   },
   {
     "name": "GlobeMap",
-	"pause": 30000,
+    "pause": 30000,
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZTM0MWZkYjEtYjliNi00MmNhLTk5MGUtM2I0Nzc4NmUzNGJhIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDQ2MzRmM2UtNDNlYy00NDAwLWIzZTQtZTdkZWY1MzdhMTE0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -89,7 +119,10 @@
     }
   },
   {
-    "name": "Histogram",    
+    "name": "Histogram",
+    "element": {
+      "frame": "svg.histogram g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWZlOWJhODEtZWNjNi00MjQ3LWJjNmYtOTRiYThlMTcwYzI2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiM2FkNzMyNzktZWJkNS00MDljLWJlNDEtZDE2YmViNzA1OWUyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -98,6 +131,9 @@
   },
   {
     "name": "LineDotChart",
+    "element": {
+      "frame": "svg.lineDotChart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiMWM5MzE5YjgtZWFkMS00ZWY0LTgyZDEtMmVjNzVhNDhlNDYzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYjNjOWY3MzgtNWNmNy00YWM3LWFlNWUtNDFkOTI4NWFkYTU5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -106,6 +142,9 @@
   },
   {
     "name": "MekkoChart",
+    "element": {
+      "frame": "div.mekkoChart > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTdlNWIyMDItMmZlNy00ZWJhLWE2Y2ItZGM3OTg1NGEzZTg4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOWI0MjMyMTctMjE3My00NTQ1LTgzNjctY2Q0OTg3NTRhNmVlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -114,6 +153,9 @@
   },
   {
     "name": "PulseChart",
+    "element": {
+      "frame": "svg.pulseChart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZjBmMDk2NjEtZTcxMS00ZTU5LWI2ZjgtMjFjNTQ3NjBlMWYwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZDYzZTNlZmItMmJjYi00MTFkLTg0OWItMDdiM2U3MmM0MjUxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -122,6 +164,9 @@
   },
   {
     "name": "Radar",
+    "element": {
+      "frame": "svg.radarChart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiMjY2NDAxNjctODk3Ny00MGMwLTk5YWMtZDdmNGJlN2YxMmE1IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZjYwNDdhMmYtNTBiNi00M2M4LTk2OWYtNjNlYmQ4NDIyMTVjIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -130,6 +175,7 @@
   },
   {
     "name": "SandDance",
+    "pause": 5000,
     "element": {
       "await": "div.visual div.rootElement > div:not(.invisible) > div"
     },
@@ -141,6 +187,9 @@
   },
   {
     "name": "SankeyDiagram",
+    "element": {
+      "frame": "svg.sankeyDiagram g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTUxMzFiMWYtNGM0My00NzRjLWIzZmYtZDFkNDdkZjIwYTEyIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOTRiZDc2MWUtNmNmOS00NWU1LWEwMTAtNmQxMzZiM2NmNzM2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -149,6 +198,9 @@
   },
   {
     "name": "StreamGraph",
+    "element": {
+      "frame": "svg.streamGraph g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiMTZiYzU3ZDEtZjhlYS00YWZkLTg3NWYtZTkyYTlmNDZjMTI2IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWVkOTYwOTYtN2ExMi00ODRjLWE1OGQtYjZjMjFkN2QzNzkzIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -157,6 +209,9 @@
   },
   {
     "name": "Sunburst",
+    "element": {
+      "frame": "svg.sunburst g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiODBhZDVmYzgtZTYwYS00MDE0LTk1MmEtZThiNDQ4OTU0MWViIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZTk1YmFmNGQtZmI0Ni00YWU2LWJiNGQtNGM3OGIxMDlmYTk3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -165,6 +220,10 @@
   },
   {
     "name": "TableHeatMap",
+    "pause": 3000,
+    "element": {
+      "frame":"svg.svgTableHeatMap g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTA1NTM3NzItYWRlZC00MGVlLThiNmYtMWJmZTg0M2JkNjdmIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGIxYmJmNWMtNjMwNC00MDY2LWI0YzItMzI5NmRjY2VhMmQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -173,6 +232,9 @@
   },
   {
     "name": "Timeline",
+    "element": {
+      "frame": "svg.timeline g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiNWU4MzVjMWEtNGExMy00ZWQ1LTlkZGMtYjMyM2IxYmVmNDQwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYzJiMmU5ZmUtZWQxMS00MjkwLWFiNWQtYjY2Njk2NTkwYmRkIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -181,6 +243,9 @@
   },
   {
     "name": "Tornado",
+    "element": {
+      "frame": "svg.tornado-chart g > *"
+    },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiODdjMTlkOGYtOWQzYS00YjIwLWIyNmMtNGU1ZjFhY2E3MzNhIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiODcyMmVhNzctOWNjMC00YjQzLTkyNWEtM2FiZWFjY2JkM2ZiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
@@ -189,7 +254,9 @@
   },
   {
     "name": "FunnelPlot",
-    "pause": 5000,
+    "element": {
+      "frame": "svg.main-svg g > *"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNWNlOTBiNDMtZDljOC00ZjYyLTg1ODYtMTE3ZTMyYjM1MWNiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmI0Nzk4OWUtNTU3My00OGFkLWEyNmQtMjA0NWExYjlmZWQ0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -197,7 +264,9 @@
   },
   {
     "name": "AssociationRules",
-    "pause": 5000,
+    "element": {
+      "frame": "img.rcv_autoScaleImage[src^='data']"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZGFhZmZkYmQtYmVlOS00MWQ3LTlhMDItZjUzZTA0Y2UwOTBhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNmZhZTE4OWYtMjI0Zi00ZjFlLWJiNzEtMzE4Y2Y3MWZkZjcwIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -205,7 +274,9 @@
   },
   {
     "name": "Spline",
-    "pause": 5000,
+    "element": {
+      "frame": "svg.main-svg g > *"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMjFiNTQ5MWQtMGM4NC00YjgzLWE1ZDgtNWM0OWE2ZTZjMGJlIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiOTlkMDZhOTQtNTRhZi00OGQ1LTk3YTgtMGQzYTZhNWQ5MzljIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -215,6 +286,7 @@
     "name": "TimeSeriesDecomposition",
     "pause": 5000,
     "element": {
+      "frame": "img.rcv_autoScaleImage[src^='data']",
       "snapshot": ".visualContainerHost"
     },
     "environments": {
@@ -224,7 +296,9 @@
   },
   {
     "name": "DesicionTree",
-    "pause": 5000,
+    "element": {
+      "frame": "img.rcv_autoScaleImage[src^='data']"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNGNlYjdjZDUtM2JlMS00MDY1LThjYjMtYzhlMTdmYzU0Mjc1IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNjI5ZDExYmItNGZlNS00ZTQ1LWI5OWYtNDk4ZmYwZmU4Y2ZmIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -232,7 +306,9 @@
   },
   {
     "name": "Clustering",
-    "pause": 5000,
+    "element": {
+      "frame": "svg.main-svg g > *"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiMThhNjk3YmItNDAxZC00ODA0LWExMTQtOTIyNjk0OGE1OTM2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNWY3OTcxZWQtNjU2YS00ZDAwLWFiYmQtN2Q2N2U0NjRlMjdhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -240,7 +316,9 @@
   },
   {
     "name": "CorrelationPlot",
-    "pause": 5000,
+    "element": {
+      "frame": "img.rcv_autoScaleImage[src^='data']"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYWVkZTg1ZWUtZjU1ZC00YjZmLWI2NDQtNjFhNGMxNzFlZDM3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYzE3ZmQxN2EtNDdhNy00YTM3LWEzMGMtNmEzYjk2ZGY0Y2E3IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -248,8 +326,9 @@
   },
   {
     "name": "ClusteringWithOutliers",
-    "pause": 5000,
+    "pause": 7000,
     "element": {
+      "frame": "img.rcv_autoScaleImage[src^='data']",
       "snapshot": ".visualContainerHost"
     },
     "environments": {
@@ -259,7 +338,9 @@
   },
   {
     "name": "TimeSeriesForecasting",
-    "pause": 5000,
+    "element": {
+      "frame": "svg.main-svg g > *"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYjMzNzBhODUtNDM1Ny00N2NiLThjZTktMzA5ZDhlMTk3ODY1IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZWY2MGM1Y2EtNTZlMS00OTI5LTk2NTQtZTJiNTg3ZDAxNjE5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"
@@ -267,7 +348,9 @@
   },
   {
     "name": "ForecastingWithARIMA",
-    "pause": 5000,
+    "element": {
+      "frame": "svg.main-svg g > *"
+    },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOTFjZDk3NDUtNzdhMS00YmJiLTkxOWUtMGIxOTIwZTQ3ZDg4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNzYwM2VlOWUtYjFjZC00YTAxLWE4MjMtNjQ5YTkwMTI0MDI0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9"

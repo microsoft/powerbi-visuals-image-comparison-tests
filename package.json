@@ -1,6 +1,6 @@
 {
   "name": "powerbi-visuals-image-comparison-tests",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Image comparison tests for custom visuals",
   "scripts": {
     "preimage-comparison-test": "tsc --project ./tsconfig.json",
