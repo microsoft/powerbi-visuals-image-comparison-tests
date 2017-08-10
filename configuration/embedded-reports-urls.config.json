@@ -310,10 +310,8 @@
   },
   {
     "name": "TimeSeriesDecomposition",
-    "pause": 5000,
     "element": {
-      "frame": "img.rcv_autoScaleImage[src^='data']",
-      "snapshot": ".visualContainerHost"
+      "frame": "img.rcv_autoScaleImage[src^='data']"
     },
     "environments": {
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGRhMjU2NDYtYzgxMi00YThlLThhYjEtMmRlNjUxZWQ0M2U0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
