@@ -39,13 +39,13 @@ var powerbi;
             (function (test) {
                 var imageComparison;
                 (function (imageComparison) {
-                    var existTimeout = 15000, pause = 0, defaultElement = "div.visual", defaultFrameElement = "svg";
+                    var existTimeout = 15000, pause = 2500, defaultElement = "div.visual", defaultFrameElement = "svg";
                     config.forEach(function (item) {
                         describe(item.name || "Name is not specified", function () {
                             var _loop_1 = function (env) {
                                 it(env, function (done) {
                                     var url = item.environments && item.environments[env];
-                                    var isUrl = /^https\:\/\/(app|dxt|msit)\.powerbi\.com\/view/.test(url);
+                                    var isUrl = /^https\:\/\/(app|dxt|msit|powerbi-df)\.(powerbi|analysis-df\.windows)\.(com|net)\/view/.test(url);
                                     expect(isUrl).toBe(true);
                                     browser
                                         .timeouts("script", 60000)
@@ -59,7 +59,6 @@ var powerbi;
                                             if (!item.element || (item.element && !item.element.frame)) {
                                                 return resolve();
                                             }
-                                            var el;
                                             browser
                                                 .element("iframe.visual-sandbox")
                                                 .then(function (res) { return browser.frame(res.value); })
