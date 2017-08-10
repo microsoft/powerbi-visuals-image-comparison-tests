@@ -45,7 +45,7 @@ module powerbi.extensibility.visual.test.imageComparison {
             for (const env in item.environments) {
                 it(env, (done) => {
                     const url = item.environments && item.environments[env];
-                    const isUrl = /^https\:\/\/(app|dxt|msit)\.powerbi\.com\/view/.test(url);
+                    const isUrl = /^https\:\/\/(app|dxt|msit|powerbi-df)\.(powerbi|analysis-df\.windows)\.(com|net)\/view/.test(url);
 
                     expect(isUrl).toBe(true);
 
