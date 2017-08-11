@@ -2,7 +2,7 @@
   {
     "name": "ChicletSlicer",
     "element": {
-      "frame": "div.chicletSlicer"
+      "frame": "div.chicletSlicer .slicerBody .cell"
     },
     "environments" : {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTA1ZmQ5NWItOGE5NS00NTQ4LTgyMDQtMjE0NGJhYWQxZTQzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
@@ -26,7 +26,7 @@
   {
     "name": "PowerKPI",
     "element": {
-      "await": "div.powerKPI"
+      "await": "div.powerKPI g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWRmYmEzZDktMmQ1OC00ZmRiLWE2NDMtMjYxMjc3NWY3NTQ4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
@@ -62,7 +62,7 @@
   {
     "name": "BulletChart",
     "element": {
-      "frame": "div.bulletChart > *"
+      "frame": "div.bulletChart g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYzUwNjI1NzgtZTVkOS00OTRkLWFhMDgtZWNkZjNjMTcwNzc1IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
@@ -156,7 +156,7 @@
   {
     "name": "MekkoChart",
     "element": {
-      "frame": "div.mekkoChart > svg g.axisGraphicsContext"
+      "frame": "div.mekkoChart g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTdlNWIyMDItMmZlNy00ZWJhLWE2Y2ItZGM3OTg1NGEzZTg4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
