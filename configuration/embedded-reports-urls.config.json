@@ -156,7 +156,7 @@
   {
     "name": "MekkoChart",
     "element": {
-      "frame": "div.mekkoChart > *"
+      "frame": "div.mekkoChart > svg g.axisGraphicsContext"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTdlNWIyMDItMmZlNy00ZWJhLWE2Y2ItZGM3OTg1NGEzZTg4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
