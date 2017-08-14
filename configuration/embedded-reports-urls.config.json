@@ -168,7 +168,7 @@
   {
     "name": "PulseChart",
     "element": {
-      "frame": "svg.pulseChart g > *"
+      "frame": "svg.pulseChart g.chart g.lineNode g.lineContainer > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZjBmMDk2NjEtZTcxMS00ZTU5LWI2ZjgtMjFjNTQ3NjBlMWYwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
