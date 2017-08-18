@@ -37,8 +37,56 @@ module powerbi.extensibility.visual.test.imageComparison {
 
     const existTimeout = 15000,
         pause = 2500,
-        defaultElement = "div.visual",
-        defaultFrameElement = "svg";
+        defaultElement = `div.visual`,
+        defaultFrameElement = `svg`,
+        pagePaginationElements = `.logoBar .navigation-wrapper > a`;
+
+    function paginatePages(
+        loop: () => void,
+        done: () => void): void {
+        let pagePaginationSelElements: WebdriverIO.Element[] = [];
+
+        this
+            .elements(pagePaginationElements)
+            .then((res) => {
+                pagePaginationSelElements = res.value;
+                return browser.elementIdElement(pagePaginationSelElements[2].ELEMENT, "i");
+            })
+            .then((res) =>
+                browser.elementIdAttribute(res.value.ELEMENT, `class`))
+            .then((res) => {
+                if (res.value.indexOf(`inactive`) === -1) {
+                    browser
+                        .elementIdClick(pagePaginationSelElements[2].ELEMENT);
+
+                    loop();
+                } else {
+                    browser
+                        .call(done);
+                }
+            });
+    }
+
+    function checkIFrame(item: any): Promise<any>{
+        return new Promise(resolve => {
+            if (!item.element ||
+                (item.element && !item.element.frame)) {
+                return resolve();
+            }
+
+            browser
+                .element("iframe.visual-sandbox")
+                .then((res) => browser.frame(res.value))
+                .waitForExist(
+                    (item.element && item.element.frame) || defaultFrameElement,
+                    item.existTimeout || existTimeout)
+
+                .frameParent()
+                .then(() => {
+                    resolve();
+                });
+        });
+    }
 
     config.forEach(item => {
         describe(item.name || "Name is not specified", () => {
@@ -46,6 +94,7 @@ module powerbi.extensibility.visual.test.imageComparison {
                 it(env, (done) => {
                     const url = item.environments && item.environments[env];
                     const isUrl = /^https\:\/\/(app|dxt|msit|powerbi-df)\.(powerbi|analysis-df\.windows)\.(com|net)\/view/.test(url);
+                    let page = 0;
 
                     expect(isUrl).toBe(true);
 
@@ -54,42 +103,28 @@ module powerbi.extensibility.visual.test.imageComparison {
                         .timeouts("implicit", 60000)
                         .timeouts("page load", 60000);
 
-                    browser
-                        .url(url)
-                        .waitForExist(
-                            (item.element && item.element.await) || defaultElement,
-                            item.existTimeout || existTimeout
-                        )
-                        .then(() => {
-                            const framePromise = new Promise(resolve => {
-                                if (!item.element || (item.element && !item.element.frame)) {
-                                    return resolve();
-                                }
-
-                                browser
-                                    .element("iframe.visual-sandbox")
-                                    .then((res) => browser.frame(res.value))
-                                    .waitForExist(
-                                        (item.element && item.element.frame) || defaultFrameElement,
-                                        item.existTimeout || existTimeout)
-                                    .frameParent()
-                                    .then(() => {
-                                        resolve();
-                                    })
-                            });
-
-                            framePromise
+                    let urlPromise: any = browser.url(url);
+                    (function loop(){
+                        urlPromise
+                            .waitForExist(
+                                (item.element && item.element.await) || defaultElement,
+                                item.existTimeout || existTimeout
+                            )
+                            .then(() => {
+                                checkIFrame(item)
                                 .then(() => {
-                                    browser
+                                    let screenShotPromise = browser
                                         .pause(item.pause || pause)
                                         .assertAreaScreenshotMatch({
-                                            name: "visual",
-                                            ignore: 'antialiasing',
-                                            elem: (item.element && item.element.snapshot) || defaultElement,
-                                        })
-                                        .call(done);
+                                            name: `visual_page_${++page}`,
+                                            ignore: `antialiasing`,
+                                            elem: (item.element && item.element.snapshot) || defaultElement
+                                        });
+
+                                    paginatePages.apply(screenShotPromise, [loop, done]);
                                 });
-                        });
+                            });
+                    }());
                 });
             }
         });
