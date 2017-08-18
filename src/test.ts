@@ -71,7 +71,8 @@ module powerbi.extensibility.visual.test.imageComparison {
         element: any,
         existTimeout: number): Promise<any>{
         return new Promise(resolve => {
-            if (!element.frame) {
+            if (!element ||
+                (element && !element.frame)) {
                 return resolve();
             }
 
