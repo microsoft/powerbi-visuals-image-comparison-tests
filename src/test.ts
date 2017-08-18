@@ -35,7 +35,7 @@ let config = require('../configuration/embedded-reports-urls.config.json');
 
 module powerbi.extensibility.visual.test.imageComparison {
 
-    const existTimeout = 15000,
+    const dafaultExistTimeout = 15000,
         pause = 2500,
         defaultElement = `div.visual`,
         defaultFrameElement = `svg`,
@@ -67,10 +67,11 @@ module powerbi.extensibility.visual.test.imageComparison {
             });
     }
 
-    function checkIFrame(item: any): Promise<any>{
+    function checkIFrame(
+        element: any,
+        existTimeout: number): Promise<any>{
         return new Promise(resolve => {
-            if (!item.element ||
-                (item.element && !item.element.frame)) {
+            if (!element.frame) {
                 return resolve();
             }
 
@@ -78,9 +79,8 @@ module powerbi.extensibility.visual.test.imageComparison {
                 .element("iframe.visual-sandbox")
                 .then((res) => browser.frame(res.value))
                 .waitForExist(
-                    (item.element && item.element.frame) || defaultFrameElement,
-                    item.existTimeout || existTimeout)
-
+                    (element && element.frame) || defaultFrameElement,
+                    existTimeout || dafaultExistTimeout)
                 .frameParent()
                 .then(() => {
                     resolve();
@@ -105,20 +105,26 @@ module powerbi.extensibility.visual.test.imageComparison {
 
                     let urlPromise: any = browser.url(url);
                     (function loop(){
+                        let element: any = item.element || null;
+                        if (element &&
+                            Object.prototype.toString.call(item.element) === `[object Array]`) {
+                            element = element[page];
+                        }
+
                         urlPromise
                             .waitForExist(
-                                (item.element && item.element.await) || defaultElement,
-                                item.existTimeout || existTimeout
+                                (element && element.await) || defaultElement,
+                                item.existTimeout || dafaultExistTimeout
                             )
                             .then(() => {
-                                checkIFrame(item)
+                                checkIFrame(element, item.existTimeout)
                                 .then(() => {
                                     let screenShotPromise = browser
                                         .pause(item.pause || pause)
                                         .assertAreaScreenshotMatch({
                                             name: `visual_page_${++page}`,
                                             ignore: `antialiasing`,
-                                            elem: (item.element && item.element.snapshot) || defaultElement
+                                            elem: (element && element.snapshot) || defaultElement
                                         });
 
                                     paginatePages.apply(screenShotPromise, [loop, done]);
