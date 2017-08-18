@@ -253,9 +253,14 @@
   },
   {
     "name": "Timeline",
-    "element": {
-      "frame": "svg.timeline g > *"
-    },
+    "element": [{
+        "frame": "svg.timeline g > *"
+      },
+      {
+        "frame": "svg.timeline g > *",
+        "snapshot": ".visualContainerHost"
+      }
+    ],
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiNWU4MzVjMWEtNGExMy00ZWQ1LTlkZGMtYjMyM2IxYmVmNDQwIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiYzJiMmU5ZmUtZWQxMS00MjkwLWFiNWQtYjY2Njk2NTkwYmRkIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
