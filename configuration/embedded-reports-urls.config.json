@@ -229,7 +229,7 @@
   {
     "name": "Sunburst",
     "element": {
-      "frame": "svg.sunburst g > *"
+      "frame": "div.sunburst svg g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiODBhZDVmYzgtZTYwYS00MDE0LTk1MmEtZThiNDQ4OTU0MWViIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",

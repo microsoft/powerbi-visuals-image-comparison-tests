@@ -35,8 +35,8 @@ let config = require('../configuration/embedded-reports-urls.config.json');
 
 module powerbi.extensibility.visual.test.imageComparison {
 
-    const dafaultExistTimeout = 15000,
-        pause = 2500,
+    const dafaultExistTimeout = 20000,
+        pause = 3500,
         defaultElement = `div.visual`,
         defaultFrameElement = `svg`,
         pagePaginationElements = `.logoBar .navigation-wrapper > a`;
