@@ -98,7 +98,7 @@
   {
     "name": "EnhancedScatter",
     "element": {
-      "await": "svg.enhancedScatterChart g > *"
+      "frame": "svg.enhancedScatterChart g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYmZkZDE0YTYtMWZiOS00NjE5LTkzYTAtZjlhYjQzMThiZjAzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
