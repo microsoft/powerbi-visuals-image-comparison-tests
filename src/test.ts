@@ -32,70 +32,87 @@
 /// <reference path="./../node_modules/webdriver-client-test-runner/src/webdriver-client-test-runner/typedefs/exports.d.ts" />
 
 let config = require('../configuration/embedded-reports-urls.config.json');
+let debugMode: boolean = process.argv.indexOf("--debug") !== -1;
 
 module powerbi.extensibility.visual.test.imageComparison {
 
-    const dafaultExistTimeout = 20000,
-        pause = 3500,
-        defaultElement = `div.visual`,
-        defaultFrameElement = `svg`,
-        pagePaginationElements = `.logoBar .navigation-wrapper > a`;
+    const dafaultExistTimeout: number = 20000,
+        defaultPause: number = 3500,
+        defaultElement: string = `div.visual`,
+        defaultFrameElement: string = `svg`,
+        iframeSandboxElement: string = `iframe.visual-sandbox`,
+        pagePaginationElements: string = `.logoBar .navigation-wrapper > a`;
 
-    function paginatePages(
-        loop: () => void,
-        done: () => void): void {
-        let pagePaginationSelElements: WebdriverIO.Element[] = [];
+    async function paginatePages(loop: () => void): Promise<any> {
+        try {
+            let paginationLinkEl: WebdriverIO.Element[] =
+                (await browser.elements(pagePaginationElements)).value;
+            let paginationIconEl: WebdriverIO.RawResult<WebdriverIO.Element> =
+                await browser.elementIdElement(paginationLinkEl[2].ELEMENT, `i`);
 
-        this
-            .elements(pagePaginationElements)
-            .then((res) => {
-                pagePaginationSelElements = res.value;
-                return browser.elementIdElement(pagePaginationSelElements[2].ELEMENT, "i");
-            })
-            .then((res) =>
-                browser.elementIdAttribute(res.value.ELEMENT, `class`))
-            .then((res) => {
-                if (res.value.indexOf(`inactive`) === -1) {
-                    browser
-                        .elementIdClick(pagePaginationSelElements[2].ELEMENT);
+            let classedOfPaginationEl: WebdriverIO.RawResult<string> =
+                await browser.elementIdAttribute(paginationIconEl.value.ELEMENT, `class`);
 
-                    loop();
-                } else {
-                    browser
-                        .call(done);
-                }
-            });
-    }
-
-    function checkIFrame(
-        element: any,
-        existTimeout: number): Promise<any>{
-        return new Promise(resolve => {
-            if (!element ||
-                (element && !element.frame)) {
-                return resolve();
+            if (classedOfPaginationEl.value.indexOf(`inactive`) !== -1) {
+                return;
             }
 
-            browser
-                .element("iframe.visual-sandbox")
-                .then((res) => browser.frame(res.value))
-                .waitForExist(
-                    (element && element.frame) || defaultFrameElement,
-                    existTimeout || dafaultExistTimeout)
-                .frameParent()
-                .then(() => {
-                    resolve();
-                });
-        });
+            await browser
+                .elementIdClick(paginationLinkEl[2].ELEMENT);
+
+            loop();
+        } catch (err) {
+            throw new Error(err);
+        }
+    }
+
+    async function checkIFrame(
+        element: any,
+        existTimeout: number): Promise<any> {
+        if (!element ||
+            (element && !element.frame)) {
+            return;
+        }
+
+        let frameElement: string = (element && element.frame) || defaultFrameElement;
+        let frameTimeout: number = existTimeout || dafaultExistTimeout;
+
+        try {
+            await browser.waitForExist(iframeSandboxElement, dafaultExistTimeout - 5000);
+
+            let iFrameEl = await browser.element(iframeSandboxElement);
+            await browser.frame(iFrameEl.value);
+
+            await browser.waitForExist(frameElement, frameTimeout);
+            await browser.frameParent();
+
+            return;
+        } catch(err) {
+            throw new Error(err);
+        }
+    }
+
+    function takeScreenshot(
+        pause: number,
+        page: number,
+        screenshotElement: string): void {
+
+        browser
+            .pause(pause)
+            .assertAreaScreenshotMatch({
+                name: `visual_page_${++page}`,
+                ignore: `antialiasing`,
+                elem: screenshotElement
+            });
     }
 
     config.forEach(item => {
         describe(item.name || "Name is not specified", () => {
             for (const env in item.environments) {
                 it(env, (done) => {
-                    const url = item.environments && item.environments[env];
-                    const isUrl = /^https\:\/\/(app|dxt|msit|powerbi-df)\.(powerbi|analysis-df\.windows)\.(com|net)\/view/.test(url);
-                    let page = 0;
+                    const url: string = item.environments && item.environments[env];
+                    const isUrl: boolean = /^https\:\/\/(app|dxt|msit|powerbi-df)\.(powerbi|analysis-df\.windows)\.(com|net)\/view/.test(url);
+                    let page: number = 0;
 
                     expect(isUrl).toBe(true);
 
@@ -112,25 +129,27 @@ module powerbi.extensibility.visual.test.imageComparison {
                             element = element[page];
                         }
 
-                        urlPromise
-                            .waitForExist(
-                                (element && element.await) || defaultElement,
-                                item.existTimeout || dafaultExistTimeout
-                            )
-                            .then(() => {
-                                checkIFrame(element, item.existTimeout)
-                                .then(() => {
-                                    let screenShotPromise = browser
-                                        .pause(item.pause || pause)
-                                        .assertAreaScreenshotMatch({
-                                            name: `visual_page_${++page}`,
-                                            ignore: `antialiasing`,
-                                            elem: (element && element.snapshot) || defaultElement
-                                        });
+                        let awaitElement: string = (element && element.await) || defaultElement;
+                        let screenshotElement: string = (element && element.snapshot) || defaultElement;
+                        let existTimeout: number = item.existTimeout || dafaultExistTimeout;
+                        let pause: number = item.pause || defaultPause;
 
-                                    paginatePages.apply(screenShotPromise, [loop, done]);
-                                });
-                            });
+                        (async () => {
+                            try {
+                                await urlPromise;
+                                await browser.waitForExist(awaitElement, existTimeout);
+
+                                await checkIFrame(element, existTimeout);
+                                await takeScreenshot(pause, page, screenshotElement);
+                                await paginatePages(loop);
+                            } catch(err) {
+                                if (debugMode) {
+                                    console.error(err.message);
+                                }
+                            }
+
+                            browser.call(done);
+                        })();
                     }());
                 });
             }

@@ -3,8 +3,9 @@
   "version": "1.1.0",
   "description": "Image comparison tests for custom visuals",
   "scripts": {
-    "preimage-comparison-test": "tsc --project ./tsconfig.json",
-    "image-comparison-test": "node ./run.js",
+    "preict": "tsc --project ./tsconfig.json",
+    "ict": "node ./run.js",
+    "ict:debug": "npm run ict -- --debug",
     "lint": "tslint -r \"node_modules/tslint-microsoft-contrib\" \"+(src|test)/**/*.ts\""
   },
   "repository": {
