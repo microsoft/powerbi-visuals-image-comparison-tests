@@ -264,8 +264,8 @@
   {
     "name": "Timeline",
     "element": [{
-        "frame": "svg.timeline g > *"
-      },
+      "frame": "svg.timeline g > *"
+    },
       {
         "frame": "svg.timeline g > *",
         "snapshot": ".visualContainerHost"
@@ -403,4 +403,3 @@
     }
   }
 ]
-
