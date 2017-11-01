@@ -149,12 +149,28 @@ var powerbi;
                         });
                     }
                     function takeScreenshot(pause, page, screenshotElement) {
-                        browser
-                            .pause(pause)
-                            .assertAreaScreenshotMatch({
-                            name: "visual_page_" + ++page,
-                            ignore: "antialiasing",
-                            elem: screenshotElement
+                        return __awaiter(this, void 0, void 0, function () {
+                            var err_3;
+                            return __generator(this, function (_a) {
+                                switch (_a.label) {
+                                    case 0:
+                                        _a.trys.push([0, 2, , 3]);
+                                        return [4 /*yield*/, browser
+                                                .pause(pause)
+                                                .assertAreaScreenshotMatch({
+                                                name: "visual_page_" + ++page,
+                                                ignore: "antialiasing",
+                                                elem: screenshotElement
+                                            })];
+                                    case 1:
+                                        _a.sent();
+                                        return [3 /*break*/, 3];
+                                    case 2:
+                                        err_3 = _a.sent();
+                                        throw new Error(err_3);
+                                    case 3: return [2 /*return*/];
+                                }
+                            });
                         });
                     }
                     config.forEach(function (item) {
@@ -182,7 +198,7 @@ var powerbi;
                                         var existTimeout = item.existTimeout || dafaultExistTimeout;
                                         var pause = item.pause || defaultPause;
                                         (function () { return __awaiter(_this, void 0, void 0, function () {
-                                            var err_3;
+                                            var err_4;
                                             return __generator(this, function (_a) {
                                                 switch (_a.label) {
                                                     case 0:
@@ -204,9 +220,9 @@ var powerbi;
                                                         _a.sent();
                                                         return [3 /*break*/, 7];
                                                     case 6:
-                                                        err_3 = _a.sent();
+                                                        err_4 = _a.sent();
                                                         if (debugMode) {
-                                                            console.error(err_3.message);
+                                                            console.error(err_4.message);
                                                         }
                                                         return [3 /*break*/, 7];
                                                     case 7:
