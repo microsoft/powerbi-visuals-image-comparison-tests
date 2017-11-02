@@ -92,18 +92,22 @@ module powerbi.extensibility.visual.test.imageComparison {
         }
     }
 
-    function takeScreenshot(
+    async function takeScreenshot(
         pause: number,
         page: number,
-        screenshotElement: string): void {
+        screenshotElement: string): Promise<any>  {
 
-        browser
-            .pause(pause)
-            .assertAreaScreenshotMatch({
-                name: `visual_page_${++page}`,
-                ignore: `antialiasing`,
-                elem: screenshotElement
-            });
+        try {
+            await browser
+                .pause(pause)
+                .assertAreaScreenshotMatch({
+                    name: `visual_page_${++page}`,
+                    ignore: `antialiasing`,
+                    elem: screenshotElement
+                });
+        } catch(err) {
+            throw new Error(err);
+        }
     }
 
     config.forEach(item => {
