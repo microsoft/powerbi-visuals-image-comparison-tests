@@ -53,14 +53,15 @@ module powerbi.extensibility.visual.test.imageComparison {
             let classedOfPaginationEl: WebdriverIO.RawResult<string> =
                 await browser.elementIdAttribute(paginationIconEl.value.ELEMENT, `class`);
 
-            if (classedOfPaginationEl.value.indexOf(`inactive`) !== -1) {
+            if (classedOfPaginationEl.value.indexOf(`inactive`) !== -1 ||
+                classedOfPaginationEl.value.indexOf("pbi-glyph-chevronrightmedium") === -1) {
                 return;
             }
 
             await browser
                 .elementIdClick(paginationLinkEl[2].ELEMENT);
 
-            loop();
+            await loop();
         } catch (err) {
             throw new Error(err);
         }
@@ -101,7 +102,7 @@ module powerbi.extensibility.visual.test.imageComparison {
             await browser
                 .pause(pause)
                 .assertAreaScreenshotMatch({
-                    name: `visual_page_${++page}`,
+                    name: `visual_page_${page}`,
                     ignore: `antialiasing`,
                     elem: screenshotElement
                 });
@@ -126,7 +127,7 @@ module powerbi.extensibility.visual.test.imageComparison {
                         .timeouts("page load", 60000);
 
                     let urlPromise: any = browser.url(url);
-                    (function loop(){
+                    (async function loop(){
                         let element: any = item.element || null;
                         if (element &&
                             Object.prototype.toString.call(item.element) === `[object Array]`) {
@@ -138,23 +139,21 @@ module powerbi.extensibility.visual.test.imageComparison {
                         let existTimeout: number = item.existTimeout || dafaultExistTimeout;
                         let pause: number = item.pause || defaultPause;
 
-                        (async () => {
-                            try {
-                                await urlPromise;
-                                await browser.waitForExist(awaitElement, existTimeout);
+                        try {
+                            await urlPromise;
+                            await browser.waitForExist(awaitElement, existTimeout);
 
-                                await checkIFrame(element, existTimeout);
-                                await takeScreenshot(pause, page, screenshotElement);
-                                await paginatePages(loop);
-                            } catch(err) {
-                                if (debugMode) {
-                                    console.error(err.message);
-                                }
+                            await checkIFrame(element, existTimeout);
+                            await takeScreenshot(pause, ++page, screenshotElement);
+                            await paginatePages(loop);
+                        } catch(err) {
+                            if (debugMode) {
+                                console.error(err.message);
                             }
+                        }
 
-                            browser.call(done);
-                        })();
-                    }());
+                        browser.call(done);
+                    })();
                 });
             }
         });
