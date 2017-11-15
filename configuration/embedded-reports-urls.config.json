@@ -1,10 +1,34 @@
 [
   {
+    "name": "PowerKPI",
+    "element": {
+      "await": "div.powerKPI g > *"
+    },
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWRmYmEzZDktMmQ1OC00ZmRiLWE2NDMtMjYxMjc3NWY3NTQ4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiM2RkOGY3ZDQtMzBkMi00MzI3LTg2OTItNzQ3YzE4NjliODQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiOWI3NjUzNjAtNWYyNS00ZGMwLWExN2QtZWFkZjc2YzdlYmZhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
+      "edog": "https://powerbi-df.analysis-df.windows.net/view?r=eyJrIjoiOGMwNjVlODktNjc1OS00ZDJjLTkzODUtZGMwNGM2M2YxZGNlIiwidCI6ImY2ODZkNDI2LThkMTYtNDJkYi04MWI3LWFiNTc4ZTExMGNjZCIsImMiOjEyfQ%3D%3D"
+    }
+  },
+  {
+    "name": "PowerKPIMatrix",
+    "element": {
+      "await": "div.powerKPIMatrix_rootComponent .sparklineCellComponent_svg g > *"
+    },
+    "environments": {
+      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZGFlMTRkMjQtNDYxYy00NjZlLWI1NWMtNDhjZGZjZmVmZjJiIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
+      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZTE1YjhjZGItYmEwNS00NjlmLWFhMWMtZTY2MzRkZjdmMTljIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
+      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNDg3YjI5MzktZDA1My00MzBmLThkOWItMTY4NWE3YzBlYmMyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
+      "edog": "https://powerbi-df.analysis-df.windows.net/view?r=eyJrIjoiZjNiZGQwMGEtOGYyNi00ZDlhLWEyNjktY2MzOGYwY2MyNjAyIiwidCI6ImY2ODZkNDI2LThkMTYtNDJkYi04MWI3LWFiNTc4ZTExMGNjZCIsImMiOjEyfQ%3D%3D"
+    }
+  },
+  {
     "name": "ChicletSlicer",
     "element": {
       "frame": "div.chicletSlicer .slicerBody .cell"
     },
-    "environments" : {
+    "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiYTA1ZmQ5NWItOGE5NS00NTQ4LTgyMDQtMjE0NGJhYWQxZTQzIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiOGEyYzIyZmQtYzkzMS00NWEyLWEwMTMtODcyM2ZmM2JmZmI4IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiYmYyODEzZDYtNGJmYy00ZTJhLTg5ZWQtNTU0ODdlY2IwNDcyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
@@ -21,18 +45,6 @@
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiZWM1MTM1NTMtMzI3Ni00NGJmLThmNWItOTlhNmZkMThjNjUxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZDQ2MWRlNWMtYWMyMi00OGQxLWFhZTUtNjQwNTgxYzU0Y2RiIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
       "edog": "https://powerbi-df.analysis-df.windows.net/view?r=eyJrIjoiMjZmMjQ5MzQtNDZmNy00NWM0LTg0NjUtOTQ5OGYzNDMwNTQzIiwidCI6ImY2ODZkNDI2LThkMTYtNDJkYi04MWI3LWFiNTc4ZTExMGNjZCIsImMiOjEyfQ%3D%3D"
-    }
-  },
-  {
-    "name": "PowerKPI",
-    "element": {
-      "await": "div.powerKPI g > *"
-    },
-    "environments": {
-      "prod": "https://app.powerbi.com/view?r=eyJrIjoiYWRmYmEzZDktMmQ1OC00ZmRiLWE2NDMtMjYxMjc3NWY3NTQ4IiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
-      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiM2RkOGY3ZDQtMzBkMi00MzI3LTg2OTItNzQ3YzE4NjliODQ2IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
-      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiOWI3NjUzNjAtNWYyNS00ZGMwLWExN2QtZWFkZjc2YzdlYmZhIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
-      "edog": "https://powerbi-df.analysis-df.windows.net/view?r=eyJrIjoiOGMwNjVlODktNjc1OS00ZDJjLTkzODUtZGMwNGM2M2YxZGNlIiwidCI6ImY2ODZkNDI2LThkMTYtNDJkYi04MWI3LWFiNTc4ZTExMGNjZCIsImMiOjEyfQ%3D%3D"
     }
   },
   {
@@ -252,7 +264,7 @@
     "name": "TableHeatMap",
     "pause": 3000,
     "element": {
-      "frame":"svg.svgTableHeatMap g > *"
+      "frame": "svg.svgTableHeatMap g > *"
     },
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiOTA1NTM3NzItYWRlZC00MGVlLThiNmYtMWJmZTg0M2JkNjdmIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
@@ -263,9 +275,10 @@
   },
   {
     "name": "Timeline",
-    "element": [{
-      "frame": "svg.timeline g > *"
-    },
+    "element": [
+      {
+        "frame": "svg.timeline g > *"
+      },
       {
         "frame": "svg.timeline g > *",
         "snapshot": ".visualContainerHost"
