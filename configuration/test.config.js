@@ -11,8 +11,8 @@ module.exports = {
         browserName: "chromium",
         chromeOptions: {
             binary: getBrowserBinPath("chromium"),
-            args: ['--disable-extensions']
-}
+            args: ['disable-extensions']
+        }
     }],
     webdrivercss: {
         screenshotRoot: "./../screenshots/",
