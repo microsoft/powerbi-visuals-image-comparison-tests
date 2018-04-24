@@ -76,9 +76,9 @@ var powerbi;
                 var imageComparison;
                 (function (imageComparison) {
                     var dafaultExistTimeout = 20000, defaultPause = 3500, pauseBeforeLoaderWasAppeared = 500, pauseBeforeCheckingLoader = 1000, defaultElement = "div.visual", loaderElement = "div.circle", defaultFrameElement = "svg", iframeSandboxElement = "iframe.visual-sandbox", pagePaginationElements = ".logoBar .navigation-wrapper > a";
-                    function paginatePages(loop) {
+                    function paginatePages(loop, remainedPages) {
                         return __awaiter(this, void 0, void 0, function () {
-                            var paginationLinkEl, paginationIconEl, classedOfPaginationEl, err_1;
+                            var paginationLinkEl, paginationIconEl, err_1;
                             return __generator(this, function (_a) {
                                 switch (_a.label) {
                                     case 0:
@@ -89,21 +89,16 @@ var powerbi;
                                         return [4 /*yield*/, browser.elementIdElement(paginationLinkEl[2].ELEMENT, "i")];
                                     case 2:
                                         paginationIconEl = _a.sent();
-                                        return [4 /*yield*/, browser.elementIdAttribute(paginationIconEl.value.ELEMENT, "class")];
-                                    case 3:
-                                        classedOfPaginationEl = _a.sent();
-                                        if (classedOfPaginationEl.value.indexOf("inactive") !== -1 ||
-                                            classedOfPaginationEl.value.indexOf("pbi-glyph-chevronrightmedium") === -1) {
-                                            return [2 /*return*/];
-                                        }
+                                        if (!(remainedPages > 0)) return [3 /*break*/, 5];
                                         return [4 /*yield*/, browser
                                                 .elementIdClick(paginationLinkEl[2].ELEMENT)];
+                                    case 3:
+                                        _a.sent();
+                                        return [4 /*yield*/, loop(remainedPages)];
                                     case 4:
                                         _a.sent();
-                                        return [4 /*yield*/, loop()];
-                                    case 5:
-                                        _a.sent();
-                                        return [3 /*break*/, 7];
+                                        _a.label = 5;
+                                    case 5: return [3 /*break*/, 7];
                                     case 6:
                                         err_1 = _a.sent();
                                         throw new Error(err_1);
@@ -214,58 +209,68 @@ var powerbi;
                                         .timeouts("implicit", 1000)
                                         .timeouts("page load", 60000);
                                     var urlPromise = browser.url(url);
-                                    (function loop() {
-                                        return __awaiter(this, void 0, void 0, function () {
-                                            var element, awaitElement, screenshotElement, existTimeout, pause, err_5;
-                                            return __generator(this, function (_a) {
-                                                switch (_a.label) {
-                                                    case 0:
-                                                        element = item.element || null;
-                                                        if (element &&
-                                                            Object.prototype.toString.call(item.element) === "[object Array]") {
-                                                            element = element[page];
-                                                        }
-                                                        awaitElement = (element && element.await) || defaultElement;
-                                                        screenshotElement = (element && element.snapshot) || defaultElement;
-                                                        existTimeout = item.existTimeout || dafaultExistTimeout;
-                                                        pause = item.pause || defaultPause;
-                                                        _a.label = 1;
-                                                    case 1:
-                                                        _a.trys.push([1, 8, , 9]);
-                                                        return [4 /*yield*/, urlPromise];
-                                                    case 2:
-                                                        _a.sent();
-                                                        return [4 /*yield*/, browser
-                                                                .waitForExist(awaitElement, existTimeout)
-                                                                .pause(pauseBeforeLoaderWasAppeared)];
-                                                    case 3:
-                                                        _a.sent();
-                                                        return [4 /*yield*/, checkDataLoading()];
-                                                    case 4:
-                                                        _a.sent();
-                                                        return [4 /*yield*/, checkIFrame(element, existTimeout)];
-                                                    case 5:
-                                                        _a.sent();
-                                                        return [4 /*yield*/, takeScreenshot(pause, ++page, screenshotElement)];
-                                                    case 6:
-                                                        _a.sent();
-                                                        return [4 /*yield*/, paginatePages(loop)];
-                                                    case 7:
-                                                        _a.sent();
-                                                        return [3 /*break*/, 9];
-                                                    case 8:
-                                                        err_5 = _a.sent();
-                                                        if (debugMode) {
-                                                            console.error(err_5.message);
-                                                        }
-                                                        return [3 /*break*/, 9];
-                                                    case 9:
-                                                        browser.call(done);
-                                                        return [2 /*return*/];
-                                                }
+                                    urlPromise
+                                        .then(function () {
+                                        setTimeout(function () {
+                                            browser
+                                                .getText("span.navigation-wrapper.navigation-wrapper-big a")
+                                                .then(function (value) {
+                                                var pages = +(value[1].split("of").pop() || 1);
+                                                (function loop(remainedPages) {
+                                                    return __awaiter(this, void 0, void 0, function () {
+                                                        var element, awaitElement, screenshotElement, existTimeout, pause, err_5;
+                                                        return __generator(this, function (_a) {
+                                                            switch (_a.label) {
+                                                                case 0:
+                                                                    element = item.element || null;
+                                                                    if (element &&
+                                                                        Object.prototype.toString.call(item.element) === "[object Array]") {
+                                                                        element = element[page];
+                                                                    }
+                                                                    awaitElement = (element && element.await) || defaultElement;
+                                                                    screenshotElement = (element && element.snapshot) || defaultElement;
+                                                                    existTimeout = item.existTimeout || dafaultExistTimeout;
+                                                                    pause = item.pause || defaultPause;
+                                                                    _a.label = 1;
+                                                                case 1:
+                                                                    _a.trys.push([1, 8, , 9]);
+                                                                    return [4 /*yield*/, urlPromise];
+                                                                case 2:
+                                                                    _a.sent();
+                                                                    return [4 /*yield*/, browser
+                                                                            .waitForExist(awaitElement, existTimeout)
+                                                                            .pause(pauseBeforeLoaderWasAppeared)];
+                                                                case 3:
+                                                                    _a.sent();
+                                                                    return [4 /*yield*/, checkDataLoading()];
+                                                                case 4:
+                                                                    _a.sent();
+                                                                    return [4 /*yield*/, checkIFrame(element, existTimeout)];
+                                                                case 5:
+                                                                    _a.sent();
+                                                                    return [4 /*yield*/, takeScreenshot(pause, ++page, screenshotElement)];
+                                                                case 6:
+                                                                    _a.sent();
+                                                                    return [4 /*yield*/, paginatePages(loop, --remainedPages)];
+                                                                case 7:
+                                                                    _a.sent();
+                                                                    return [3 /*break*/, 9];
+                                                                case 8:
+                                                                    err_5 = _a.sent();
+                                                                    if (debugMode) {
+                                                                        console.error(err_5.message);
+                                                                    }
+                                                                    return [3 /*break*/, 9];
+                                                                case 9:
+                                                                    browser.call(done);
+                                                                    return [2 /*return*/];
+                                                            }
+                                                        });
+                                                    });
+                                                })(pages);
                                             });
-                                        });
-                                    })();
+                                        }, 2000);
+                                    });
                                 });
                             };
                             for (var env in item.environments) {
@@ -278,3 +283,4 @@ var powerbi;
         })(visual = extensibility.visual || (extensibility.visual = {}));
     })(extensibility = powerbi.extensibility || (powerbi.extensibility = {}));
 })(powerbi || (powerbi = {}));
+//# sourceMappingURL=test.js.map

@@ -46,25 +46,27 @@ module powerbi.extensibility.visual.test.imageComparison {
         iframeSandboxElement: string = `iframe.visual-sandbox`,
         pagePaginationElements: string = `.logoBar .navigation-wrapper > a`;
 
-    async function paginatePages(loop: () => void): Promise<any> {
+    async function paginatePages(loop: (remainedPages: number) => void, remainedPages): Promise<any> {
         try {
             let paginationLinkEl: WebdriverIO.Element[] =
                 (await browser.elements(pagePaginationElements)).value;
             let paginationIconEl: WebdriverIO.RawResult<WebdriverIO.Element> =
                 await browser.elementIdElement(paginationLinkEl[2].ELEMENT, `i`);
 
-            let classedOfPaginationEl: WebdriverIO.RawResult<string> =
-                await browser.elementIdAttribute(paginationIconEl.value.ELEMENT, `class`);
+            // let classedOfPaginationEl: WebdriverIO.RawResult<string> =
+            //     await browser.elementIdAttribute(paginationIconEl.value.ELEMENT, `class`);
 
-            if (classedOfPaginationEl.value.indexOf(`inactive`) !== -1 ||
-                classedOfPaginationEl.value.indexOf("pbi-glyph-chevronrightmedium") === -1) {
-                return;
+            // if (classedOfPaginationEl.value.indexOf(`inactive`) !== -1 ||
+            //     classedOfPaginationEl.value.indexOf("pbi-glyph-chevronrightmedium") === -1) {
+            //     return;
+            // }
+
+            if (remainedPages > 0) {
+                await browser
+                    .elementIdClick(paginationLinkEl[2].ELEMENT);
+
+                await loop(remainedPages);
             }
-
-            await browser
-                .elementIdClick(paginationLinkEl[2].ELEMENT);
-
-            await loop();
         } catch (err) {
             throw new Error(err);
         }
@@ -142,36 +144,47 @@ module powerbi.extensibility.visual.test.imageComparison {
                         .timeouts("page load", 60000);
 
                     let urlPromise: any = browser.url(url);
-                    (async function loop(){
-                        let element: any = item.element || null;
-                        if (element &&
-                            Object.prototype.toString.call(item.element) === `[object Array]`) {
-                            element = element[page];
-                        }
+                    urlPromise
+                    .then(() => {
+                        setTimeout(() => { // just wait loading, waitForExist doesn't work
+                            browser
+                            .getText("span.navigation-wrapper.navigation-wrapper-big a")
+                            .then((value) => {
+                                let pages: number = +(value[1].split("of").pop() || 1);
 
-                        let awaitElement: string = (element && element.await) || defaultElement;
-                        let screenshotElement: string = (element && element.snapshot) || defaultElement;
-                        let existTimeout: number = item.existTimeout || dafaultExistTimeout;
-                        let pause: number = item.pause || defaultPause;
-
-                        try {
-                            await urlPromise;
-                            await browser
-                                .waitForExist(awaitElement, existTimeout)
-                                .pause(pauseBeforeLoaderWasAppeared);
-
-                            await checkDataLoading();
-                            await checkIFrame(element, existTimeout);
-                            await takeScreenshot(pause, ++page, screenshotElement);
-                            await paginatePages(loop);
-                        } catch(err) {
-                            if (debugMode) {
-                                console.error(err.message);
-                            }
-                        }
-
-                        browser.call(done);
-                    })();
+                                (async function loop(remainedPages: number){
+                                    let element: any = item.element || null;
+                                    if (element &&
+                                        Object.prototype.toString.call(item.element) === `[object Array]`) {
+                                        element = element[page];
+                                    }
+            
+                                    let awaitElement: string = (element && element.await) || defaultElement;
+                                    let screenshotElement: string = (element && element.snapshot) || defaultElement;
+                                    let existTimeout: number = item.existTimeout || dafaultExistTimeout;
+                                    let pause: number = item.pause || defaultPause;
+            
+                                    try {
+                                        await urlPromise;
+                                        await browser
+                                            .waitForExist(awaitElement, existTimeout)
+                                            .pause(pauseBeforeLoaderWasAppeared);
+            
+                                        await checkDataLoading();
+                                        await checkIFrame(element, existTimeout);
+                                        await takeScreenshot(pause, ++page, screenshotElement);
+                                        await paginatePages(loop, --remainedPages);
+                                    } catch(err) {
+                                        if (debugMode) {
+                                            console.error(err.message);
+                                        }
+                                    }
+            
+                                    browser.call(done);
+                                })(pages);
+                            })
+                        }, 2000);
+                    });
                 });
             }
         });
