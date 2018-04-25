@@ -5,7 +5,7 @@
 environment:
   nodejs_version: "7.7.1"
   access_token:
-    secure: jkwt64TmhxwWc861PGDdv5y1oustxuPCDh8K7+0lyp/PgxQGW3vH3o4QMXAlyznG
+    secure: /mu5wr532f2gxL+y46Opz3CBWZgsF7QvuP6xGVvnMxqxXRXHXRAIpegFA+3N/2rn
 
 # Build version format test
 version: "{build}"
