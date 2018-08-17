@@ -135,16 +135,6 @@
     "name": "GlobeMap",
     "pause": 30000,
     "environments": {
-      "prod": "https://app.powerbi.com/view?r=eyJrIjoiZTM0MWZkYjEtYjliNi00MmNhLTk5MGUtM2I0Nzc4NmUzNGJhIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
-      "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDQ2MzRmM2UtNDNlYy00NDAwLWIzZTQtZTdkZWY1MzdhMTE0IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
-      "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiZDI3OWRiZWItMjZkOC00MzM4LWFhOTEtYjE1ZTg0MGM5NTIxIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
-      "edog": "https://powerbi-df.analysis-df.windows.net/view?r=eyJrIjoiNDFiYzgzOTktYTIwMy00MTUwLTk1OTMtY2FkNzg1NzZiYjJiIiwidCI6ImY2ODZkNDI2LThkMTYtNDJkYi04MWI3LWFiNTc4ZTExMGNjZCIsImMiOjEyfQ%3D%3D"
-    }
-  },
-  {
-    "name": "GlobeMap_New",
-    "pause": 30000,
-    "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZmI2YjQ3N2YtYTUwZS00NWU3LTliY2MtOTlkOWZlNDE0MjcxIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDAzZGY5NGItMjQ4Ny00NjA4LTg1NGYtMmRjMGE2OTQ0YzMyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
       "dxt": "https://dxt.powerbi.com/view?r=eyJrIjoiNGNiODQyOWQtNDc5My00Zjg1LTllMjktMzZiMzBhZjBhYTU5IiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjJ9",
