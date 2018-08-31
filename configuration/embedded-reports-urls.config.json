@@ -133,7 +133,7 @@
   },
   {
     "name": "GlobeMap",
-    "pause": 30000,
+    "pause": 60000,
     "environments": {
       "prod": "https://app.powerbi.com/view?r=eyJrIjoiZmI2YjQ3N2YtYTUwZS00NWU3LTliY2MtOTlkOWZlNDE0MjcxIiwidCI6IjM3MjQ4MTdmLTU1YzktNDEzOC05M2Y4LTg2N2EzNTAzYmYxMSIsImMiOjZ9",
       "msit": "https://msit.powerbi.com/view?r=eyJrIjoiNDAzZGY5NGItMjQ4Ny00NjA4LTg1NGYtMmRjMGE2OTQ0YzMyIiwidCI6IjcyZjk4OGJmLTg2ZjEtNDFhZi05MWFiLTJkN2NkMDExZGI0NyIsImMiOjV9",
