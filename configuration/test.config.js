@@ -32,7 +32,7 @@ function getBrowserBinPath(name) {
     let browser = browsersConfig.filter(x => x.name.toLowerCase() === name)[0];
     const browserPath = browser && browser.getExecutablePath();
     if (!browserPath) {
-        throw new Error("Unable to find '" + name + "' binaries ti run tests.");
+        throw new Error("Unable to find '" + name + "' binaries to run tests.");
     }
     return browserPath;
 }
